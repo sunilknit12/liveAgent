@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>Magnum | Consumer Care</title>
 
     <!-- Basic Styling -->
@@ -103,7 +104,26 @@
                     Get instant support from our virtual assistant or connect
                     with a Magnum Care expert.
                 </p>
-                <!-- Salesforce Chat / Messaging button can be embedded here -->
+                <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00Dg5000000dBmn',
+				'CEC_Live_Agent_Chat',
+				'https://orgfarm-68c11faf88-dev-ed.develop.my.site.com/ESWCECLiveAgentChat1768405346485',
+				{
+					scrt2URL: 'https://orgfarm-68c11faf88-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-68c11faf88-dev-ed.develop.my.site.com/ESWCECLiveAgentChat1768405346485/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
                 <a href="#" class="btn">Start Chat</a>
             </div>
 
